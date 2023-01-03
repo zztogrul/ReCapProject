@@ -21,5 +21,20 @@ namespace Business.Concrete
             // İş Kodları
             return _carDal.GetAll();
         }
+
+        public List<Car> GetByDailyPrice(decimal min)
+        {
+            return _carDal.GetAll(p => p.DailyPrice >= 0);
+        }
+
+        public List<Car> GetCarsByBrandId()
+        {
+            throw new NotImplementedException();
+        }
+
+        public List<Car> GetCarsByColorId()
+        {
+            throw new NotImplementedException();
+        }
     }
 }
